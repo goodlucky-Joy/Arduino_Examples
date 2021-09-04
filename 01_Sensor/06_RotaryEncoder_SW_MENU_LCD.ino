@@ -38,10 +38,10 @@ void setup()
 
 void loop()
 {
-  enterMenu();
+  encoderMenu();
 }
 
-void enterMenu()
+void encoderMenu()
 {
   static int pos = 0;
   encoder.tick();

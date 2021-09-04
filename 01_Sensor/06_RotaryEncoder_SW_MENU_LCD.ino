@@ -12,7 +12,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 RotaryEncoder encoder(PIN_IN1, PIN_IN2, RotaryEncoder::LatchMode::TWO03);
 
 int mode = 0; // 0: init , 1: Monitoring , 2: Setting
-int menu = 0;     // 0: Temperature , 1: Humidity , 2: light , 3: Soil Moisture
+int menu = 0;     // 0: Exit, 1: Temperature , 2: Humidity , 3: light , 4: Soil Moisture
 int currentMenu = 0;
 int trig_signal = 30;
 

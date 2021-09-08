@@ -1,0 +1,12 @@
+ESP8266(ESP-01) 
+AT Commands
+
+1. AT             // 통신연결 확인, 연결 성공시 OK 출력
+2. AT+GMR         // ESP-01 모듈 버전 확인
+3. AT+CWMODE=     // WiFi 모드 설정 (1: AP에 접속할 수 있는 기기 , 2: AP(Access Point) mode , 3: 복합모드)
+4. AT+CWMODE?     // WiFi 모드 확인
+5. AT+CWLAP       // 주변 WiFi 리스트 시리얼 모니터 창에 출력 (CWMODE 3번에서 가능)
+6. AT+CWJAP="SSID","PASS" // 특정 AP에 연결
+7. AT+CWJAP?              // 현재 연결된 AP 확인
+8. AT+CWQAP               // 현재 연결된 AP 접속 해제
+9. AT+CIFSR               // 현재 할당받은 IP 주소 확인

@@ -1,5 +1,5 @@
-int A1 = 12;
-int A2 = 10;
+#define A1 12
+#define A2 10
 
 void setup()
 {

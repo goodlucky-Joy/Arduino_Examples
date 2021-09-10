@@ -10,23 +10,27 @@ BH1750 LightSensor;
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 
+float hum, temp;
+int mois, lux;
+
 int fan_control = 8;
 int led_control = 9;
 int pump_control = 10;
 
-float set_temp, set_hum;
-int set_light, set_soil;
+//float set_temp, set_hum;
+//int set_light, set_soil;
 
 void setup(void){
+  Wire.begin();
+  LightSensor.begin();
+
   lcd.begin(16,2);
   lcd.init();
   lcd.clear();
   lcd.backlight();
+
   dht.begin();
-
-  Wire.begin();
-  LightSensor.begin();
-
+  
   pinMode(pump_control, OUTPUT);
   pinMode(fan_control, OUTPUT);
   pinMode(led_control, OUTPUT);
@@ -45,6 +49,7 @@ void loop(void){
   fan_heat();
   sun(lux);
 
+  lcd.init();
   lcd.setCursor(0,0);
   lcd.print("Temp:");
   lcd.print(temp, 1);
